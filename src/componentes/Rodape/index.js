@@ -26,7 +26,7 @@ const Rodape = () => {
                 <img src='/imagens/logo.png' alt='logotipo' />
             </section>
             <section className='desenvolvido'>
-                <p>Desenvolvido por Alura</p>
+                <p>Desenvolvido por Mauro</p>
             </section>
         </footer>
     )
