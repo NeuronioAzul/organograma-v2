@@ -1,5 +1,5 @@
 .footer {
-    background-color: #6278F7;
+    background-color: #1c1c1c;
     color: #fff;
     padding: 80px;
     display: flex;
@@ -14,4 +14,8 @@
 
 .footer ul li:last-child {
     margin-right: 0;
+}
+
+.footer .logotipo img {
+    height: 80px;
 }
