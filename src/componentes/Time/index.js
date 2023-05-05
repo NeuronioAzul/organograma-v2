@@ -1,10 +1,10 @@
 import Colaborador from '../Colaborador'
 import './Time.css'
+import hexToRgba from 'hex-to-rgba';
 
 const Time = ({time, colaboradores, aoDeletar}) => {
     return (
-        colaboradores.length > 0 && 
-        <section className='time' style={{ backgroundColor: time.corSecundaria }}>
+        <section className='time' style={{ backgroundColor: hexToRgba(time.cor, 0.2) }}>
             <h3 style={{ borderColor: time.corPrimaria }}>
                 {time.nome}
             </h3>
