@@ -4,6 +4,7 @@ import hexToRgba from 'hex-to-rgba';
 
 const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
     return (
+        colaboradores.length > 0 &&
         <section className='time' style={{ backgroundColor: hexToRgba(time.cor, 0.2) }}>
             <input
                 onChange={evento => mudarCor(evento.target.value, time.nome)}
@@ -15,14 +16,18 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
                 {time.nome}
             </h3>
             <div className='colaboradores'>
-                {colaboradores.map(colaborador => <Colaborador
-                    key={colaborador.nome}
-                    nome={colaborador.nome}
-                    cargo={colaborador.cargo}
-                    imagem={colaborador.imagem}
-                    corDeFundo={time.corPrimaria}
-                    aoDeletar={aoDeletar}
-                />)}
+                {
+                    colaboradores.map(
+                        (colaborador, indice) => (
+                            <Colaborador
+                                key={indice}
+                                colaborador={colaborador}
+                                corDeFundo={time.cor}
+                                aoDeletar={aoDeletar}
+                            />
+                        )
+                    )
+                }
             </div>
         </section>
     )
