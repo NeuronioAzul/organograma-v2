@@ -6,38 +6,32 @@ import Rodape from './componentes/Rodape';
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: 'Azul',
-      corPrimaria: '#1c92c9',
-      corSecundaria: '#c8ebff',
+      cor: '#c8ebff',
     },
     {
       nome: 'Branco',
-      corPrimaria: '#ffcb65',
-      corSecundaria: '#fff4e6',
+      cor: '#fff4e6',
     },
     {
       nome: 'Incolor',
-      corPrimaria: '#cccccc',
-      corSecundaria: '#eeeeee',
+      cor: '#eeeeee',
     },
     {
       nome: 'Verde',
-      corPrimaria: '#1cc940',
-      corSecundaria: '#a6ffd1',
+      cor: '#a6ffd1',
     },
     {
       nome: 'Vermelho',
-      corPrimaria: '#ff6600',
-      corSecundaria: '#ffbcb2'
+      cor: '#ffbcb2'
     },
     {
       nome: 'Preto',
-      corPrimaria: '#1d1d1d',
-      corSecundaria: '#515b59',
+      cor: '#515b59',
     }
-  ]
+  ])
 
   const [colaboradores, setColaborador] = useState([])
 
@@ -49,14 +43,27 @@ function App() {
     console.log("Colaborador excluido")
   }
 
+  const mudarCorDoTime = (cor, nome) => {
+    setTimes(times.map(time => {
+      if (time.nome === nome) {
+        time.cor = cor
+      }
+      return time
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoColaboradorCadstrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
+      <Formulario
+        times={times.map(time => time.nome)}
+        aoColaboradorCadstrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+      />
       {
         times.map(
           (time, indice) => (
             <Time
+              mudarCor={mudarCorDoTime}
               key={indice}
               time={time}
               colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}

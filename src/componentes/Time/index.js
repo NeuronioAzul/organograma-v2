@@ -2,9 +2,15 @@ import Colaborador from '../Colaborador'
 import './Time.css'
 import hexToRgba from 'hex-to-rgba';
 
-const Time = ({time, colaboradores, aoDeletar}) => {
+const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
     return (
         <section className='time' style={{ backgroundColor: hexToRgba(time.cor, 0.2) }}>
+            <input
+                onChange={evento => mudarCor(evento.target.value, time.nome)}
+                value={time.cor}
+                type='color'
+                className='input-cor'
+            />
             <h3 style={{ borderColor: time.corPrimaria }}>
                 {time.nome}
             </h3>
