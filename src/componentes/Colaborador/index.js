@@ -1,9 +1,10 @@
 import './Colaborador.css'
+import { AiFillCloseSquare } from 'react-icons/ai'
 
 const Colaborador = ({nome, cargo, imagem, corDeFundo}) => {
     return (
         <div className="colaborador">
-            <div className="deletar">Deletar</div>
+            <AiFillCloseSquare size={32} className="deletar" onClick={aoDeletar} />
             <div className="cabecalho" style={{backgroundColor: corDeFundo}}>
                 <img src={imagem} alt={nome} />
             </div>
