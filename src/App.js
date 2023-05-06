@@ -254,11 +254,11 @@ function App() {
     }))
   }
 
-  function cadastrarTime(novotime) {
+  const cadastrarTime = (novotime) => {
     setTimes([...times, { ...novotime, id: uuidv4() }])
   }
 
-  function resolverFavorito(id) {
+  const resolverFavorito = (id) => {
     setColaboradores(
       colaboradores.map(
         colaborador => {
