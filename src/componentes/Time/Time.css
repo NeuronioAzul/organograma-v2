@@ -7,8 +7,8 @@
 .time h3 {
     display: inline-block;
     font-size: 32px;
-    border-bottom: 4px solid;
     padding-bottom: 8px;
+    margin-bottom: 0px;
 }
 
 .time .colaboradores {

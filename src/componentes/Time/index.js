@@ -12,9 +12,10 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor, aoFavoritar }) => {
                 type='color'
                 className='input-cor'
             />
-            <h3 style={{ borderColor: time.corPrimaria }}>
+            <h3>
                 {time.nome}
             </h3>
+            <hr style={{ border: `2px solid ${time.cor}`, width: '50px' }} />
             <div className='colaboradores'>
                 {
                     colaboradores.map(
