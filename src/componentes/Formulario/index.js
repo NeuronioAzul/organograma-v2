@@ -11,7 +11,7 @@ const Formulario = ({ aoColaboradorCadstrado, times, cadastrarTime }) => {
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
     const [nomeTime, setNomeTime] = useState('')
-    const [corTime, setCorTime] = useState('')
+    const [cor, setCor] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -65,7 +65,7 @@ const Formulario = ({ aoColaboradorCadstrado, times, cadastrarTime }) => {
                 onSubmit={
                     (evento) => {
                         evento.preventDefault()
-                        cadastrarTime({nome:nomeTime, cor:corTime})
+                        cadastrarTime({nome:nomeTime, cor:cor})
                     }
                 }
             >
@@ -82,8 +82,8 @@ const Formulario = ({ aoColaboradorCadstrado, times, cadastrarTime }) => {
                     type="color"
                     label="Cor"
                     placeholder="Digite a cor do timeo"
-                    valor={corTime}
-                    aoAlterado={valor => setCorTime(valor)}
+                    valor={cor}
+                    aoAlterado={valor => setCor(valor)}
                 />
                 <Botao>Criar um novo time</Botao>
             </form>
