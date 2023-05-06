@@ -211,14 +211,14 @@ function App() {
     },
   ]
 
-  const [colaboradores, setColaborador] = useState(inicial)
+  const [colaboradores, setColaboradores] = useState(inicial)
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    setColaborador([...colaboradores, colaborador])
+    setColaboradores([...colaboradores, colaborador])
   }
 
-  const deletarColaborador = () => {
-    console.log("Colaborador excluido")
+  const deletarColaborador = (id) => {
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id))
   }
 
   const mudarCorDoTime = (cor, nome) => {
