@@ -4,7 +4,7 @@ import Campo from '../Campo'
 import ListaSuspensa from '../ListaSuspensa/ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = ({ aoColaboradorCadstrado, times, cadastrarTime }) => {
+const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime, exibir }) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
@@ -28,7 +28,7 @@ const Formulario = ({ aoColaboradorCadstrado, times, cadastrarTime }) => {
     }
 
     return (
-        <section className="formulario-container">
+        <section className="formulario-container" style={{ display: `${exibir ? 'flex' : 'none'}` }}>
             <form className="formulario" onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
                 <Campo
@@ -65,7 +65,7 @@ const Formulario = ({ aoColaboradorCadstrado, times, cadastrarTime }) => {
                 onSubmit={
                     (evento) => {
                         evento.preventDefault()
-                        cadastrarTime({nome:nomeTime, cor:cor})
+                        cadastrarTime({ nome: nomeTime, cor: cor })
                     }
                 }
             >
