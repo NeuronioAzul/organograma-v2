@@ -15,7 +15,7 @@ const Formulario = ({ aoColaboradorCadastrado, times, cadastrarTime, exibir }) =
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        aoColaboradorCadstrado({
+        aoColaboradorCadastrado({
             nome,
             cargo,
             imagem,
