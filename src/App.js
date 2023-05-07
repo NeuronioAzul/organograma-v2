@@ -8,6 +8,8 @@ import TituloTime from './componentes/TituloTime';
 
 function App() {
 
+  const [exibir, setExibir] = useState(false)
+
   const [times, setTimes] = useState([
     {
       id: uuidv4(),
@@ -272,15 +274,25 @@ function App() {
     )
   }
 
+
+  const tratarExibir = () => {
+    console.log('tratarExibir 1: ', exibir)
+    setExibir(!exibir)
+    console.log('tratarExibir 2:', exibir)
+  }
+
   return (
     <div className="App">
       <Banner />
       <Formulario
         cadastrarTime={cadastrarTime}
         times={times.map(time => time.nome)}
-        aoColaboradorCadstrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+        aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+        exibir={exibir}
       />
-      <TituloTime />
+      <TituloTime
+        tratarExibir={tratarExibir}
+      />
       {
         times.map(
           (time, indice) => (
