@@ -1,5 +1,5 @@
 .titulo-time {
-    margin-bottom: 64px;
+    margin: 64px 50px;
     position: relative;
 }
 
@@ -19,4 +19,17 @@
     position: absolute;
     top: -16px;
     right: 20%;
+    background-color: #1c1c1c;
+    color: #eee;
+    border: 4px solid #eee;
+    border-radius: 100%;
+    padding: 13px;
+    box-shadow: 3px 3px 10px 0 rgba(28,28,28,0.5);
+}
+
+.titulo-time .adicionar:hover {
+    cursor: pointer;
+    color: #a1f5f7;
+    border-color: #a1f5f7;
+    top: -20px;
 }
