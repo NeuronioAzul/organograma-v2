@@ -4,6 +4,7 @@ import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 import Rodape from './componentes/Rodape';
 import { v4 as uuidv4 } from 'uuid';
+import TituloTime from './componentes/TituloTime';
 
 function App() {
 
@@ -279,6 +280,7 @@ function App() {
         times={times.map(time => time.nome)}
         aoColaboradorCadstrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
       />
+      <TituloTime />
       {
         times.map(
           (time, indice) => (

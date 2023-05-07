@@ -1,0 +1,22 @@
+.titulo-time {
+    margin-bottom: 64px;
+    position: relative;
+}
+
+.titulo-time h2 {
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 0;
+    padding: 24px;
+}
+
+.titulo-time hr {
+    border: 2px solid #1c1c1c;
+    width: 100px;
+}
+
+.titulo-time .adicionar {
+    position: absolute;
+    top: -16px;
+    right: 20%;
+}
