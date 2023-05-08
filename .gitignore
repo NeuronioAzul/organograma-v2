@@ -152,3 +152,6 @@ yarn-error.log*
 
 # Package
 package-lock.json
+
+# readme folder
+/readme
