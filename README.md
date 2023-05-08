@@ -32,10 +32,10 @@ Se quiser saber mais sobre MTG visite o site oficial: [https://magic.wizards.com
 
 ## Que tecnologias usamos:
 
-React
-JavaScript
-HTML
-CSS
+- React
+- JavaScript
+- HTML
+- CSS
 
 ### Este Projeto é a evolução do Organograma feito em React com Javascript
 
